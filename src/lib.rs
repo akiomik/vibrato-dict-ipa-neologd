@@ -23,9 +23,7 @@ use std::io::prelude::*;
 /// assert_eq!("。", worker.token(8).surface());
 /// ```
 pub fn read_dict() -> Result<vibrato::Dictionary, Box<dyn std::error::Error>> {
-    let data0 = include_bytes!("../dict/mecab-ipadic-neologd.dic.zst.aa").as_slice();
-    let data1 = include_bytes!("../dict/mecab-ipadic-neologd.dic.zst.ab").as_slice();
-    let data = [data0, data1].concat();
+    let data = include_bytes!("../tmp/mecab-ipadic-neologd.dic.zst");
     let mut decoder = ruzstd::StreamingDecoder::new(data.as_slice())?;
     let mut buff = vec![];
     decoder.read_to_end(&mut buff)?;
