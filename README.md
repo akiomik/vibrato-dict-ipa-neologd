@@ -1,5 +1,7 @@
 # vibrato-dict-ipa-neologd
 
+[![CI](https://github.com/akiomik/vibrato-dict-ipa-neologd/actions/workflows/ci.yml/badge.svg)](https://github.com/akiomik/vibrato-dict-ipa-neologd/actions/workflows/ci.yml)
+
 A compiled [mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd) dictionary for [vibrato](https://github.com/daac-tools/vibrato).
 
 ## Usage
