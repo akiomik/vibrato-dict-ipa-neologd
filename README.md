@@ -4,6 +4,18 @@
 
 A compiled [mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd) dictionary for [vibrato](https://github.com/daac-tools/vibrato).
 
+## Install
+
+> [!IMPORTANT]
+> Due to file size limitations, this library does not support installation from crates.io.
+
+Add the following line to your `Cargo.toml`:
+
+```toml
+[dependencies]
+vibrato_dict_ipa_neologd = { git = "https://github.com/akiomik/vibrato-dict-ipa-neologd" }
+```
+
 ## Usage
 
 ```rust
