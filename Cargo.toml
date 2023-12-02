@@ -10,12 +10,8 @@ repository = "https://github.com/akiomik/vibrato-dict-ipa-neologd"
 homepage = "https://github.com/akiomik/vibrato-dict-ipa-neologd"
 keywords = ["dictionary", "tokenizer", "tokenization", "morphological-analysis", "nlp"]
 categories = ["text-processing"]
-exclude = ["/dict", "/mecab-ipadic-neologd", "dictgen.sh"]
-include = ["/tmp/mecab-ipadic-neologd.dic.zst"]
+exclude = ["/dict", "/mecab-ipadic-neologd", "/.github", "dictgen.sh"]
 
 [dependencies]
 ruzstd = "0.5.0"
 vibrato = "0.5.1"
-
-[lib]
-name = "vibrato_dict_ipa_neologd"
