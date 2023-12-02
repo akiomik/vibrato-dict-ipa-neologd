@@ -1,3 +1,6 @@
+/// Error types
+pub mod error;
+
 use std::io::prelude::*;
 
 /// Reads mecab-ipadic-neologd as vibrato::Dictionary
@@ -22,10 +25,11 @@ use std::io::prelude::*;
 /// assert_eq!("ようこそ", worker.token(7).surface());
 /// assert_eq!("。", worker.token(8).surface());
 /// ```
-pub fn read_dict() -> Result<vibrato::Dictionary, Box<dyn std::error::Error>> {
+pub fn read_dict() -> Result<vibrato::Dictionary, error::ReadError> {
     let data = include_bytes!("../tmp/mecab-ipadic-neologd.dic.zst");
     let mut decoder = ruzstd::StreamingDecoder::new(data.as_slice())?;
     let mut buff = vec![];
     decoder.read_to_end(&mut buff)?;
-    vibrato::Dictionary::read(buff.as_slice()).map_err(|e| e.into())
+    let dict = vibrato::Dictionary::read(buff.as_slice())?;
+    Ok(dict)
 }
