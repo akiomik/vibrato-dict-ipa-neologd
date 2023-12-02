@@ -13,7 +13,7 @@ Add the following line to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-vibrato_dict_ipa_neologd = { git = "https://github.com/akiomik/vibrato-dict-ipa-neologd" }
+vibrato-dict-ipa-neologd = { git = "https://github.com/akiomik/vibrato-dict-ipa-neologd" }
 ```
 
 ## Usage
