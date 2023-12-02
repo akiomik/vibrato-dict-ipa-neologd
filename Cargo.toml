@@ -2,8 +2,9 @@
 name = "vibrato-dict-ipa-neologd"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "Apache-2.0"
+authors = ["Akiomi Kamakura <akiomik@gmail.com>"]
+description = "A compiled mecab-ipadic-neologd dictionary for vibrato."
 
 [dependencies]
 ruzstd = "0.5.0"

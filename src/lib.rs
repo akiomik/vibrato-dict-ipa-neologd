@@ -1,9 +1,15 @@
+//! # vibrato-dict-ipadic-neologd
+//!
+//! A compiled mecab-ipadic-neologd dictionary for vibrato.
+
+#![deny(warnings, missing_docs)]
+
 /// Error types
 pub mod error;
 
 use std::io::prelude::*;
 
-/// Reads mecab-ipadic-neologd as vibrato::Dictionary
+/// Reads mecab-ipadic-neologd as [vibrato::Dictionary]
 ///
 /// # Examples
 ///
